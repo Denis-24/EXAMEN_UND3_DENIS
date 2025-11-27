@@ -1,11 +1,13 @@
 package org.example;
 
 import java.util.Iterator;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Olivas {
     static void main() {
 
+        Random aleactorio = new Random();
         Scanner teclado = new Scanner(System.in);
         double totalkg = 0;
         double totalli = 0;
@@ -84,7 +86,19 @@ public class Olivas {
             }
             System.out.println();
         }
+        System.out.println("============================");
+        System.out.println("MAPA estim acion despues de replantar");
+        for (String fila[] : matriz){
+            for (String num : fila){
+                if (Integer.parseInt(num)<5){
+                    System.out.print(aleactorio.nextInt(15,35) + " ");
+                } else if (Integer.parseInt(num)>=5) {
+                    System.out.print(num + " ");
+                }
 
+            }
+            System.out.println();
+        }
 
 
 
