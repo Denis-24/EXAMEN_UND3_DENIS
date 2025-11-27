@@ -29,7 +29,12 @@ public class Olivas {
             for (int y = 0; y < ancho; y++) {
                 String linea[] = teclado.next().split(" ");
                 for (String num : linea){
-                    matriz[x][y]=num;
+                    if (Integer.parseInt(num)<1 || Integer.parseInt(num)>50){
+                        System.out.println("Valoresn introducidos incorrectos");
+                        y--;
+                    }else{
+                        matriz[x][y]=num;
+                    }
                 }
             }
         }
